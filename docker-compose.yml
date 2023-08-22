@@ -1,0 +1,19 @@
+version: "3.8"
+
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+    volumes:
+      - .:/rust/src/app
+    entrypoint: "tail -f /dev/null"
+    ports:
+      - "8091:80"
+    env_file:
+      - .env
+
+  mongo:
+    image: mongo:6
