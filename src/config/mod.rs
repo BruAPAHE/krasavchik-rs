@@ -1,6 +1,6 @@
 use std::env;
 
-#[derive(Debug,Clone)]
+#[derive(Debug, Clone)]
 pub struct Config {
     pub app: App,
     pub mongo: Mongo,
@@ -13,7 +13,7 @@ pub struct App {
     pub version: String,
 }
 
-#[derive(Debug,Clone)]
+#[derive(Debug, Clone)]
 pub struct Mongo {
     pub dsn: String,
     pub database: String,

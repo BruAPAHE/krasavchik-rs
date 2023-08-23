@@ -1,6 +1,6 @@
 use crate::config::Config;
 
-#[derive(Debug,Clone)]
+#[derive(Debug, Clone)]
 pub struct Database {
     config: Config,
 }
